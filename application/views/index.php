@@ -149,7 +149,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="<?php echo base_url()?>/public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Prueba</span>
     </a>
 
     <!-- Sidebar -->
@@ -191,9 +191,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="./formulario" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>Crud</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -915,30 +915,65 @@
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="fas fa-chart-pie mr-1"></i>
-                  Sales
+                  formulario
                 </h3>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
-                    </li>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    añadir
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">añadir cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form class="contact2-form validate-form" id="formulario" method="POST" action="http://localhost/CodeIgniter_3_prueba/store">
+
+					<div class="wrap-input2 validate-input">
+						<input class="input2" type="text" name="nombres" id="nombres">
+						<span class="focus-input2" data-placeholder="nombres"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input">
+						<input class="input2" type="text" name="apellidos" id="apellidos">
+						<span class="focus-input2" data-placeholder="apellidos"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input">
+						<input class="input2" name="email">
+						<span class="focus-input2" data-placeholder="email" id="email"></span>
+					</div>
+
+                    <div class="wrap-input2 validate-input">
+						<input class="input2" name="identificacion">
+						<span class="focus-input2" data-placeholder="identificacion" id="identificacion"></span>
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn" id="guardar">
+								agendar
+							</button>
+						</div>
+					</div>
+				</form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
                   </ul>
                 </div>
               </div><!-- /.card-header -->
               <div class="card-body">
-                <div class="tab-content p-0">
-                  <!-- Morris chart - Sales -->
-                  <div class="chart tab-pane active" id="revenue-chart"
-                       style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-                   </div>
-                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                  </div>
-                </div>
+                <table id="producto" class="display" style="width:100%"></table>
               </div><!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -1277,145 +1312,7 @@
             <!-- /.card -->
           </section>
           <!-- /.Left col -->
-          <!-- right col (We are only adding the ID to make the widgets sortable)-->
-          <section class="col-lg-5 connectedSortable">
-
-            <!-- Map card -->
-            <div class="card bg-gradient-primary">
-              <div class="card-header border-0">
-                <h3 class="card-title">
-                  <i class="fas fa-map-marker-alt mr-1"></i>
-                  Visitors
-                </h3>
-                <!-- card tools -->
-                <div class="card-tools">
-                  <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
-                    <i class="far fa-calendar-alt"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <div class="card-body">
-                <div id="world-map" style="height: 250px; width: 100%;"></div>
-              </div>
-              <!-- /.card-body-->
-              <div class="card-footer bg-transparent">
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <div id="sparkline-1"></div>
-                    <div class="text-white">Visitors</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <div id="sparkline-2"></div>
-                    <div class="text-white">Online</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <div id="sparkline-3"></div>
-                    <div class="text-white">Sales</div>
-                  </div>
-                  <!-- ./col -->
-                </div>
-                <!-- /.row -->
-              </div>
-            </div>
-            <!-- /.card -->
-
-            <!-- solid sales graph -->
-            <div class="card bg-gradient-info">
-              <div class="card-header border-0">
-                <h3 class="card-title">
-                  <i class="fas fa-th mr-1"></i>
-                  Sales Graph
-                </h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer bg-transparent">
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">Mail-Orders</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">Online</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">In-Store</div>
-                  </div>
-                  <!-- ./col -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- /.card-footer -->
-            </div>
-            <!-- /.card -->
-
-            <!-- Calendar -->
-            <div class="card bg-gradient-success">
-              <div class="card-header border-0">
-
-                <h3 class="card-title">
-                  <i class="far fa-calendar-alt"></i>
-                  Calendar
-                </h3>
-                <!-- tools card -->
-                <div class="card-tools">
-                  <!-- button with a dropdown -->
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
-                      <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="dropdown-menu" role="menu">
-                      <a href="#" class="dropdown-item">Add new event</a>
-                      <a href="#" class="dropdown-item">Clear events</a>
-                      <div class="dropdown-divider"></div>
-                      <a href="#" class="dropdown-item">View calendar</a>
-                    </div>
-                  </div>
-                  <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-                <!-- /. tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body pt-0">
-                <!--The calendar -->
-                <div id="calendar" style="width: 100%"></div>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </section>
+          
           <!-- right col -->
         </div>
         <!-- /.row (main row) -->
@@ -1424,3 +1321,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  </body>
+
+ 

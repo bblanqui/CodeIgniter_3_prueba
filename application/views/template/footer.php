@@ -24,6 +24,7 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="<?php echo base_url()?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <!-- ChartJS -->
 <script src="<?php echo base_url()?>/public/plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
@@ -44,9 +45,83 @@
 <script src="<?php echo base_url()?>/public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url()?>/public/dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url()?>/public/dist/js/demo.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<!-- validate -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url()?>/public/dist/js/pages/dashboard.js"></script>
+<script src="<?php echo base_url()?>/public/dist/js/traduccion.js"></script>
+<script src="<?php echo base_url()?>/public/dist/js/validator.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+     <?php  if($this->session->flashdata('success')): ?>
+      Swal.fire(
+  '<?php echo $this->session->flashdata('success')?>',
+  'Click para cerrar',
+  'success'
+)
+  <?php $this->session->sess_destroy(); ?>
+     
+     <?php endif; ?>
+</script>
+
+<script >
+$('#producto').DataTable( {
+
+
+    ajax: {
+        url: '<?php echo base_url()?>all',
+        dataSrc: ''
+    },
+    columns: [{
+      title:'nombres',
+      data:'nombres'
+
+    },
+    {
+      "title":'apellidos',
+      "data":'apellidos'
+
+    },
+
+    {
+      "title":'email',
+      "data":'email'
+
+    },
+    {
+      "title":'identificacion',
+      "data":'identificacion'
+
+    },
+
+    {
+      
+                        sortable: false,
+                        "render": function ( data, type, row, meta ) {
+                            return `<a href='<?php echo base_url()?>delete/${row.identificacion}' value='${row.identificacion}'class="btn btn-danger" id="delete"><i class="fas fa-trash-alt"></i></a> 
+                             <a href='<?php echo base_url()?>${row.identificacion}' value='${row.identificacion}'class="btn btn-dark"><i class="fas fa-user-edit"></i></a>
+                            `;
+                        }
+
+    }
+
+    
+
+
+    
+
+  ]
+  
+} );
+
+
+
+
+
+</script>
+  
 </body>
+
 </html>
