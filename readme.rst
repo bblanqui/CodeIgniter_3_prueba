@@ -1,56 +1,56 @@
 ###################
-What is CodeIgniter
+Que es CodeIgniter
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+CodeIgniter es un marco de desarrollo de aplicaciones, un conjunto de herramientas, para personas
+que crean sitios web usando PHP. Su objetivo es permitirle desarrollar proyectos
+mucho más rápido de lo que podría si estuviera escribiendo código desde cero, proporcionando
+un rico conjunto de bibliotecas para tareas comúnmente necesarias, así como un sencillo
+interfaz y estructura lógica para acceder a estas bibliotecas. CodeIgniter permite
+te enfocas creativamente en tu proyecto minimizando la cantidad de código necesario
+para una tarea determinada.
 
 *******************
-Release Information
+Información de lanzamiento
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Este repositorio contiene código en desarrollo para futuras versiones. Para descargar el
+última versión estable, visite las descargas de CodeIgniter
+<https://codeigniter.com/download> `_ página.
 
 **************************
-Changelog and New Features
+Registro de cambios y nuevas funciones
 **************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Puede encontrar una lista de todos los cambios para cada versión en el archivo `user
+guía de registro de cambios <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst> `_.
 
 *******************
-Server Requirements
+Requisitos del servidor
 *******************
 
-PHP version 5.6 or newer is recommended.
+Se recomienda PHP versión 5.6 o posterior.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+También debería funcionar en 5.3.7, pero le recomendamos encarecidamente que NO ejecute
+versiones tan antiguas de PHP, debido a su potencial seguridad y rendimiento
+problemas, así como funciones faltantes.
 
 ************
-Installation
+Instalación
 ************
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+Consulte la `sección de instalación <https://codeigniter.com/user_guide/installation/index.html>` _
+de la Guía del usuario de CodeIgniter.
 
 *******
-License
+Licencia
 *******
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+Por favor, consulte la `licencia
+acuerdo <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst> `_.
 
 *********
-Resources
+Recursos
 *********
 
 -  `User Guide <https://codeigniter.com/docs>`_
