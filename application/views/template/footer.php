@@ -101,7 +101,7 @@ $('#producto').DataTable( {
                         sortable: false,
                         "render": function ( data, type, row, meta ) {
                             return `<a href='<?php echo base_url()?>delete/${row.identificacion}' value='${row.identificacion}'class="btn btn-danger" id="delete"><i class="fas fa-trash-alt"></i></a> 
-                             <a href='<?php echo base_url()?>${row.identificacion}' value='${row.identificacion}'class="btn btn-dark"><i class="fas fa-user-edit"></i></a>
+                             <a href='<?php echo base_url()?>editar/${row.identificacion}' data-bs-toggle="modal" data-bs-target="#exampleModal" value='${row.identificacion}'class="btn btn-dark"><i class="fas fa-user-edit"></i></a>
                             `;
                         }
 

@@ -24,6 +24,24 @@ class UserModel extends CI_Model{
 
       
          }
+
+         public function update ($id){
+
+         
+            $this->db->where("identificacion",$id);
+            $query=$this->db->get("cliente");
+             return $query;
+         
+            }
+
+            public function editarUser($id, $data){
+
+
+            $this->db->where("identificacion",$id);
+            
+            $this->db->update("cliente",$data);
+
+            }
      
    }
 

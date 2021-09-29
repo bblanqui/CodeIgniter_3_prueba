@@ -70,6 +70,58 @@ class Welcome extends CI_Controller {
 	
 	}
 
+
+	public function editar()
+	{
+		$id=$this->uri->segment(2);
+		$datosdb= $this->UserModel->update($id);
+		
+			foreach ($datosdb->result() as $value) {
+				$nombres = $value->nombres;
+				$apellidos = $value->apellidos;
+				$email = $value->email;
+				# code...
+			}
+			$datos = array(
+				'identificacion' =>$id,
+				'email'=>$email,
+				'apellidos' =>$apellidos,
+				'nombres' => $nombres);
+
+		$this->load->helper('url');
+        $this->load->view('template/header.php');
+		$this->load->view('editar.php', $datos);
+        $this->load->view('template/footer.php');
+       
+	
+		
+	
+	}
+
+
+	public function update()
+	{
+		$id=$this->uri->segment(2);
+		
+		$data = array(
+			"nombres"=>$this ->input->post("nombres") ,
+			"apellidos"=>$this ->input->post("apellidos"),
+			"email"=>$this ->input->post("email")
+		);
+		
+
+		$this->UserModel->editarUser($id, $data);
+
+
+
+		$this->session->set_flashdata('success', 'actualizado correctamete ok');
+		redirect();
+	
+		
+	
+	}
+
+
 	public function delete($identificacion)
 	{
 	
