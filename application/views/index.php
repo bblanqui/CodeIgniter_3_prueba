@@ -920,8 +920,10 @@
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    añadir
+                    añadir cliente
                   </button>
+                  <a href="<?php echo base_url()?>pdf"class="btn btn-danger ml-2">
+                    imprimir pdf</a>
                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

@@ -57,3 +57,4 @@ $route['all'] = 'welcome/all';
 $route['delete/(:num)'] = 'welcome/delete/$1';
 $route['editar/(:num)'] = 'welcome/editar/$1';
 $route['update/(:num)'] = 'welcome/update/$1';
+$route['pdf'] = 'welcome/pdf/';

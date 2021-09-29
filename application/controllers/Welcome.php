@@ -114,7 +114,7 @@ class Welcome extends CI_Controller {
 
 
 
-		$this->session->set_flashdata('success', 'actualizado correctamete ok');
+		$this->session->set_flashdata('success', 'actualizado correctamete');
 		redirect();
 	
 		
@@ -126,13 +126,23 @@ class Welcome extends CI_Controller {
 	{
 	
 	$this->UserModel->delete($identificacion);
-	$this->session->set_flashdata('success', 'eliminado correctamete ok');
+	$this->session->set_flashdata('success', 'eliminado correctamete');
 	redirect();
 	
 	}
 
 
 
+	public function pdf()
+	{
+	
+
+		$this->load->helper('url');
+      
+		$this->load->view('pdf.php');
+	   
+	
+	}
 }
 
 
